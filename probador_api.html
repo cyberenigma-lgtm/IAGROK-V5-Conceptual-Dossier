@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAGROK V5 — Probador de API de Caja Negra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #07090e;
+            --card-bg: rgba(15, 23, 42, 0.9);
+            --accent-cyan: #38bdf8;
+            --accent-gold: #fbbf24;
+            --accent-green: #4ade80;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            max-width: 750px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.15);
+            backdrop-filter: blur(16px);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(74, 222, 128, 0.15);
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 0.3rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.desc {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--accent-cyan);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            background: #020617;
+            color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            outline: none;
+            resize: vertical;
+        }
+
+        textarea:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+        }
+
+        button {
+            background: linear-gradient(135deg, var(--accent-cyan) 0%, #0284c7 100%);
+            color: #000000;
+            font-weight: 800;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 1rem;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .output-container {
+            margin-top: 1.5rem;
+            display: none;
+        }
+
+        .output-header {
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        pre {
+            background: #020617;
+            color: var(--accent-green);
+            padding: 1.2rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.88rem;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            max-height: 350px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="badge">● API ENDPOINT ONLINE (HTTP 200)</div>
+    <h2>🧠 IAGROK V5 — Probador de API (/api/neurobus7/pensar)</h2>
+    <p class="desc">Esta interfaz permite enviar peticiones POST JSON reales al endpoint de Caja Negra de IAGROK V5 y visualizar el tiempo de respuesta y la resonancia armónica en vivo.</p>
+
+    <label for="promptInput">JSON Payload Body ("prompt"):</label>
+    <textarea id="promptInput" placeholder="Escribe tu consulta aquí... (ej. Generar algoritmo soberano en Rust para sincronizar memoria de trabajo)"></textarea>
+
+    <button onclick="enviarPeticionApi()">🚀 Enviar Petición POST</button>
+
+    <div class="output-container" id="outputBox">
+        <div class="output-header" id="statusText">▶ Respuesta del Servidor (HTTP 200 OK):</div>
+        <pre id="jsonOutput"></pre>
+    </div>
+</div>
+
+<script>
+    async function enviarPeticionApi() {
+        const promptVal = document.getElementById('promptInput').value.trim() || "Demostración de razonamiento bi-hemisférico IAGROK V5";
+        const outputBox = document.getElementById('outputBox');
+        const jsonOutput = document.getElementById('jsonOutput');
+        const statusText = document.getElementById('statusText');
+
+        outputBox.style.display = 'block';
+        statusText.innerText = "⏳ Procesando en Neurobus 7 Maestro...";
+        jsonOutput.innerText = "Procesando...";
+
+        try {
+            const inicio = performance.now();
+            const response = await fetch('/api/neurobus7/pensar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ prompt: promptVal, contexto: { cliente: "Probador Web" } })
+            });
+
+            const duracion = (performance.now() - inicio).toFixed(2);
+            const data = await response.json();
+
+            statusText.innerHTML = `✅ Respuesta del Servidor (HTTP ${response.status} OK — Latencia Red: ${duracion} ms):`;
+            jsonOutput.innerText = JSON.stringify(data, null, 2);
+        } catch (err) {
+            statusText.innerText = "❌ Error en la Petición:";
+            jsonOutput.innerText = err.toString();
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -42,6 +42,8 @@ IAGROK_V5_Dossier_Publico/
 ├── 02_MEMORIA_EXPLICATIVA_Y_DOSSIER_LEGAL_SAFECREATIVE.md <- Memoria Depositada en SafeCreative
 ├── 03_LICENCIA_PROPIETARIA_RESTRUCTIVA_SOBERANA.md   <- Marco Legal Restrictivo
 ├── 05_PRESENTACION_EJECUTIVA_NARRATIVA_SENIOR.md     <- Presentación Ejecutiva Senior
+├── 06_HOJA_DE_RUTA_AUDITORIA_EXTERNA_Y_DEMOSTRACION_CAJA_NEGRA.md <- Hoja de Ruta de Verificación Ciega
+├── 07_ESPECIFICACION_API_CAJA_NEGRA_BLACKBOX.md      <- Especificación del Endpoint /api/neurobus7/pensar
 │
 ├── 📊 benchmark_publico/                             <- Evidencia Pública del Benchmark
 │   ├── INFORME_INTELLIGENCE_INDEX_IAGROK_2026.json  <- Informe JSON firmado dinámico

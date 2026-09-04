@@ -44,6 +44,7 @@ IAGROK_V5_Dossier_Publico/
 ├── 05_PRESENTACION_EJECUTIVA_NARRATIVA_SENIOR.md     <- Presentación Ejecutiva Senior
 ├── 06_HOJA_DE_RUTA_AUDITORIA_EXTERNA_Y_DEMOSTRACION_CAJA_NEGRA.md <- Hoja de Ruta de Verificación Ciega
 ├── 07_ESPECIFICACION_API_CAJA_NEGRA_BLACKBOX.md      <- Especificación del Endpoint /api/neurobus7/pensar
+├── 08_RESPUESTAS_TECNICAS_Y_BLINDAJE_COMUNIDAD.md    <- Mitigación de Desgaste NVMe y Prompts Caóticos
 │
 ├── 📊 benchmark_publico/                             <- Evidencia Pública del Benchmark
 │   ├── INFORME_INTELLIGENCE_INDEX_IAGROK_2026.json  <- Informe JSON firmado dinámico

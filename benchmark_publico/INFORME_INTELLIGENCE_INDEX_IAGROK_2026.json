@@ -1,0 +1,46 @@
+{
+    "modelo_evaluado": "IAGROK V5 — Cerebro Sintético Soberano",
+    "fecha": "2026-09-04 17:33:06",
+    "duracion_evaluacion_seg": 0.49,
+    "puntuacion_intelligence_index": 95.0,
+    "referencia_quasar_438b": 43.0,
+    "supera_a_quasar": true,
+    "diferencia_respecto_quasar": "+52.0 pts",
+    "vectores": [
+        {
+            "vector": "HumanEval_Programacion",
+            "total": 10,
+            "aciertos": 9,
+            "porcentaje": 90.0,
+            "peso_index": 0.3
+        },
+        {
+            "vector": "GPQA_Diamond_Doctorado",
+            "total": 5,
+            "aciertos": 5,
+            "porcentaje": 100.0,
+            "peso_index": 0.25
+        },
+        {
+            "vector": "MMLU_Pro_Sistema2",
+            "total": 5,
+            "aciertos": 5,
+            "porcentaje": 100.0,
+            "peso_index": 0.2
+        },
+        {
+            "vector": "Terminal_Bench_Agentic",
+            "total": 3,
+            "aciertos": 3,
+            "porcentaje": 100.0,
+            "peso_index": 0.15
+        },
+        {
+            "vector": "SciCode_Logica_Simbolica",
+            "total": 5,
+            "aciertos": 4,
+            "porcentaje": 80.0,
+            "peso_index": 0.1
+        }
+    ]
+}

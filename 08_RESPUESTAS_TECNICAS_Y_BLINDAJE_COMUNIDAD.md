@@ -36,3 +36,12 @@
 * **Sanitización de Entradas**: Filtrado de caracteres nulos, desbordamientos de búfer (max 16KB) e intentos de inyección de comandos OS.
 * **Rate Limiting Adaptativo**: Control dinámico por IP (max 120 req/min) con aislamiento automático en el Centinela Inmunológico.
 * **Protección de Puntuación**: Toda prueba se ejecuta sobre sandbox aislado sin modificar el informe firmado `INFORME_INTELLIGENCE_INDEX_IAGROK_2026.json`.
+
+---
+
+## ❓ Pregunta 4: "¿Qué ocurre si la comunidad intenta insultar, difamar o sabotear el trabajo del repositorio público?"
+
+### 💡 Respuesta Técnica (Regla de los Tres Ataques)
+* **Protocolo de Cierre Soberano**: Si el repositorio recibe **3 ataques directos** (difamación, acoso o sabotaje sin fundamento técnico), pasará **automáticamente a modo privado**.
+* **Documento Oficial**: Consulta la [Declaración Soberana sobre la Regla de los Tres Ataques](./09_DECLARACION_SOBERANA_REGLA_DE_LOS_TRES_ATAQUES.md).
+

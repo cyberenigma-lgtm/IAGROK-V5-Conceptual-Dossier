@@ -45,6 +45,7 @@ IAGROK_V5_Dossier_Publico/
 ├── 06_HOJA_DE_RUTA_AUDITORIA_EXTERNA_Y_DEMOSTRACION_CAJA_NEGRA.md <- Hoja de Ruta de Verificación Ciega
 ├── 07_ESPECIFICACION_API_CAJA_NEGRA_BLACKBOX.md      <- Especificación del Endpoint /api/neurobus7/pensar
 ├── 08_RESPUESTAS_TECNICAS_Y_BLINDAJE_COMUNIDAD.md    <- Mitigación de Desgaste NVMe y Prompts Caóticos
+├── 09_DECLARACION_SOBERANA_REGLA_DE_LOS_TRES_ATAQUES.md <- Declaración Oficial sobre la Regla de los Tres Ataques
 │
 ├── 📊 benchmark_publico/                             <- Evidencia Pública del Benchmark
 │   ├── INFORME_INTELLIGENCE_INDEX_IAGROK_2026.json  <- Informe JSON firmado dinámico
@@ -84,6 +85,14 @@ Queda estrictamente prohibido sin la autorización expresa y por escrito de **Jo
 2. ❌ Ingeniería inversa, deconstrucción o derivación técnica de los mecanismos descritos.
 3. ❌ Integración parcial de los principios conceptuales PAR/IMPAR o Neurobus 7 en sistemas comerciales de terceros.
 4. ❌ Uso en entornos de entrenamiento de modelos de lenguaje o compilación de datasets sintéticos.
+
+---
+
+> [!WARNING]
+> ### ⚠️ REGLA DE LOS TRES ATAQUES (CIERRE SOBERANO AUTOMÁTICO)
+> **Si este repositorio público recibe tres ataques directos —insultos, acoso, difamación, sabotaje, o intentos de desacreditar el trabajo sin fundamento técnico— el repositorio pasará automáticamente a modo privado.**
+> 
+> *Consulta el documento oficial completo:* [📜 Declaración Soberana sobre la Regla de los Tres Ataques](./09_DECLARACION_SOBERANA_REGLA_DE_LOS_TRES_ATAQUES.md)
 
 ---
 

@@ -1,0 +1,15 @@
+{
+  "benchmark_name": "IAGROK_System1_Minimal_Reproducible",
+  "iterations": 100000,
+  "mean_latency_us": 6.372,
+  "p50_latency_us": 4.7,
+  "p95_latency_us": 9.8,
+  "p99_latency_us": 11.3,
+  "throughput_ops_sec": 133200.2,
+  "ece": 0.05,
+  "accuracy": 1.0,
+  "wilson_ic95": [
+    1.0,
+    1.0
+  ]
+}

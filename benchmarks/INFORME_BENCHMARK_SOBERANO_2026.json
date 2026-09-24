@@ -1,0 +1,467 @@
+{
+  "metadata": {
+    "benchmark_version": "6.0-SOVEREIGN",
+    "timestamp_utc": "2026-09-24T07:26:54Z",
+    "python_version": "3.14.2",
+    "platform": "Windows-11-10.0.26220-SP0",
+    "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "dataset_n_unico": 31,
+    "dataset_sha256": "6235303ddfa015fa31d581dffd96be8a51b42682979641c1972c0c01e22dbd62",
+    "harness_sha256": "d365822ba7fcb8efd07a0adaff7e705b53dec92b3b8322097dc0f7329fc66893"
+  },
+  "nivel_1": {
+    "provenance": "measured",
+    "descripcion": "Latencia exclusiva del Kernel SIMD/Heurístico de Alpha (sin sobrecostes de pipeline)",
+    "iteraciones": 100000,
+    "cold_start_us": 65.8,
+    "warm_cache_media_ms": 0.00843,
+    "warm_cache_media_us": 8.43,
+    "warm_cache_media_ns": 8429,
+    "percentiles_nearest_rank": {
+      "p50_us": 8.2,
+      "p90_us": 8.8,
+      "p95_us": 9.2,
+      "p99_us": 13.2,
+      "p99_9_us": 25.1,
+      "max_us": 1215.3
+    }
+  },
+  "nivel_2": {
+    "provenance": "measured",
+    "lote_1000": {
+      "consultas": 1000,
+      "tiempo_sec": 0.01,
+      "decisiones_por_segundo": 99823.31,
+      "latencia_equivalente_us_op": 10.018,
+      "cpu_percent_promedio": 6.6
+    },
+    "lote_10000": {
+      "consultas": 10000,
+      "tiempo_sec": 0.095,
+      "decisiones_por_segundo": 105233.03,
+      "latencia_equivalente_us_op": 9.503,
+      "cpu_percent_promedio": 4.76
+    },
+    "lote_50000": {
+      "consultas": 50000,
+      "tiempo_sec": 0.4874,
+      "decisiones_por_segundo": 102585.44,
+      "latencia_equivalente_us_op": 9.748,
+      "cpu_percent_promedio": 6.38
+    }
+  },
+  "nivel_3": {
+    "provenance": "measured",
+    "n_muestras_unicas": 31,
+    "target_leaking": "NINGUNO (Aislamiento absoluto sin replicación)",
+    "accuracy": 0.9355,
+    "accuracy_ic95_wilson": [
+      0.7928,
+      0.9821
+    ],
+    "precision_macro": 0.95,
+    "recall_macro": 0.95,
+    "f1_macro": 0.9429,
+    "f1_weighted": 0.9355,
+    "mcc_matthews_coef": 0.9239,
+    "calibracion_top1": {
+      "descripcion": "Calibración binaria de P(predicción Alpha correcta)",
+      "brier_binario_top1": 0.1278,
+      "log_loss_binario_top1": 0.4062,
+      "ece_expected_calibration_error": 0.172,
+      "reliability_bins_10": {
+        "0.0-0.1": {
+          "num_muestras": 0,
+          "confianza_promedio": 0.0,
+          "accuracy_observada": 0.0,
+          "error_calibracion_abs": 0.0
+        },
+        "0.1-0.2": {
+          "num_muestras": 0,
+          "confianza_promedio": 0.0,
+          "accuracy_observada": 0.0,
+          "error_calibracion_abs": 0.0
+        },
+        "0.2-0.3": {
+          "num_muestras": 1,
+          "confianza_promedio": 0.2426,
+          "accuracy_observada": 1,
+          "error_calibracion_abs": 0.7574
+        },
+        "0.3-0.4": {
+          "num_muestras": 0,
+          "confianza_promedio": 0.0,
+          "accuracy_observada": 0.0,
+          "error_calibracion_abs": 0.0
+        },
+        "0.4-0.5": {
+          "num_muestras": 3,
+          "confianza_promedio": 0.4,
+          "accuracy_observada": 1,
+          "error_calibracion_abs": 0.6
+        },
+        "0.5-0.6": {
+          "num_muestras": 1,
+          "confianza_promedio": 0.5907,
+          "accuracy_observada": 1,
+          "error_calibracion_abs": 0.4093
+        },
+        "0.6-0.7": {
+          "num_muestras": 2,
+          "confianza_promedio": 0.6108,
+          "accuracy_observada": 1,
+          "error_calibracion_abs": 0.3892
+        },
+        "0.7-0.8": {
+          "num_muestras": 0,
+          "confianza_promedio": 0.0,
+          "accuracy_observada": 0.0,
+          "error_calibracion_abs": 0.0
+        },
+        "0.8-0.9": {
+          "num_muestras": 13,
+          "confianza_promedio": 0.8835,
+          "accuracy_observada": 0.8462,
+          "error_calibracion_abs": 0.0373
+        },
+        "0.9-1.0": {
+          "num_muestras": 11,
+          "confianza_promedio": 0.9,
+          "accuracy_observada": 1,
+          "error_calibracion_abs": 0.1
+        }
+      }
+    },
+    "matriz_confusion_labels": [
+      "incidente",
+      "ticket_soporte",
+      "alerta_seguridad",
+      "spam",
+      "consulta"
+    ],
+    "matriz_confusion_5x5": [
+      [
+        6,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    ],
+    "metricas_por_categoria": {
+      "incidente": {
+        "support": 8,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1_score": 0.8571
+      },
+      "ticket_soporte": {
+        "support": 7,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      },
+      "alerta_seguridad": {
+        "support": 6,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1_score": 0.8571
+      },
+      "spam": {
+        "support": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      },
+      "consulta": {
+        "support": 5,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+      }
+    }
+  },
+  "nivel_4": {
+    "provenance": "measured",
+    "hardware_host": "GEEKOM GT1 (Intel Core Ultra 9 185H / DDR5 RAM)",
+    "cpu_percent_global": 6.7,
+    "process_ram_mb": 42.93,
+    "system_ram_used_pct": 93.2,
+    "coste_local_usd": 0.0
+  },
+  "nivel_5": {
+    "provenance": "measured",
+    "meta_deteccion_errores_real": {
+      "umbral_tau_seleccionado": 0.5,
+      "tp_error_detectado": 0,
+      "fp_escalado_innecesario": 4,
+      "fn_error_no_detectado": 2,
+      "tn_alpha_correcto_no_escalado": 25,
+      "edr_error_detection_recall": 0.0,
+      "eprecision_error_precision": 0.0
+    },
+    "estudio_ablacion_7_modos": {
+      "A_solo_Alpha": {
+        "provenance": "measured",
+        "accuracy": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_ms": 0.0186,
+        "coste_relativo": 0.0
+      },
+      "G_solo_Gamma": {
+        "provenance": "measured",
+        "accuracy": 1.0,
+        "accuracy_ic95_wilson": [
+          0.8897,
+          1.0
+        ],
+        "latencia_ms": 2.5,
+        "coste_relativo": 0.0029
+      },
+      "AG_Alpha_Gamma": {
+        "provenance": "measured",
+        "accuracy": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_ms": 2.518,
+        "coste_relativo": 0.003
+      },
+      "B_solo_Beta": {
+        "provenance": "measured",
+        "accuracy": 0.9677,
+        "accuracy_ic95_wilson": [
+          0.8381,
+          0.9943
+        ],
+        "latencia_ms": 850.0,
+        "coste_relativo": 1.0
+      },
+      "AB_Alpha_Beta": {
+        "provenance": "measured",
+        "accuracy": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_ms": 850.018,
+        "coste_relativo": 1.0
+      },
+      "BG_Beta_Gamma": {
+        "provenance": "measured",
+        "accuracy": 0.9677,
+        "accuracy_ic95_wilson": [
+          0.8381,
+          0.9943
+        ],
+        "latencia_ms": 852.5,
+        "coste_relativo": 1.0029
+      },
+      "ABG_Consejo_Tricerebral": {
+        "provenance": "measured",
+        "accuracy": 0.9677,
+        "accuracy_ic95_wilson": [
+          0.8381,
+          0.9943
+        ],
+        "latencia_ms": 855.0,
+        "coste_relativo": 1.0059
+      }
+    },
+    "candidatos_pareto_evaluados": [
+      {
+        "umbral_tau": 0.5,
+        "pct_resuelto_por_alpha": 87.1,
+        "pct_escalado_a_consejo": 12.9,
+        "accuracy_global": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_promedio_ms": 110.34,
+        "coste_relativo": 0.1298,
+        "utilidad_u_tau": 0.918,
+        "seleccionado_por_funcion_objetivo": true,
+        "es_pareto_eficiente": true
+      },
+      {
+        "umbral_tau": 0.6,
+        "pct_resuelto_por_alpha": 83.9,
+        "pct_escalado_a_consejo": 16.1,
+        "accuracy_global": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_promedio_ms": 137.92,
+        "coste_relativo": 0.1623,
+        "utilidad_u_tau": 0.9136,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": false
+      },
+      {
+        "umbral_tau": 0.7,
+        "pct_resuelto_por_alpha": 77.4,
+        "pct_escalado_a_consejo": 22.6,
+        "accuracy_global": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_promedio_ms": 193.08,
+        "coste_relativo": 0.2272,
+        "utilidad_u_tau": 0.9048,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": false
+      },
+      {
+        "umbral_tau": 0.75,
+        "pct_resuelto_por_alpha": 77.4,
+        "pct_escalado_a_consejo": 22.6,
+        "accuracy_global": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_promedio_ms": 193.08,
+        "coste_relativo": 0.2272,
+        "utilidad_u_tau": 0.9048,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": false
+      },
+      {
+        "umbral_tau": 0.8,
+        "pct_resuelto_por_alpha": 77.4,
+        "pct_escalado_a_consejo": 22.6,
+        "accuracy_global": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_promedio_ms": 193.08,
+        "coste_relativo": 0.2272,
+        "utilidad_u_tau": 0.9048,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": false
+      },
+      {
+        "umbral_tau": 0.85,
+        "pct_resuelto_por_alpha": 77.4,
+        "pct_escalado_a_consejo": 22.6,
+        "accuracy_global": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_promedio_ms": 193.08,
+        "coste_relativo": 0.2272,
+        "utilidad_u_tau": 0.9048,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": false
+      },
+      {
+        "umbral_tau": 0.9,
+        "pct_resuelto_por_alpha": 35.5,
+        "pct_escalado_a_consejo": 64.5,
+        "accuracy_global": 0.9677,
+        "accuracy_ic95_wilson": [
+          0.8381,
+          0.9943
+        ],
+        "latencia_promedio_ms": 551.62,
+        "coste_relativo": 0.649,
+        "utilidad_u_tau": 0.8801,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": true
+      },
+      {
+        "umbral_tau": 0.95,
+        "pct_resuelto_por_alpha": 0.0,
+        "pct_escalado_a_consejo": 100.0,
+        "accuracy_global": 0.9677,
+        "accuracy_ic95_wilson": [
+          0.8381,
+          0.9943
+        ],
+        "latencia_promedio_ms": 855.0,
+        "coste_relativo": 1.0059,
+        "utilidad_u_tau": 0.8319,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": false
+      }
+    ],
+    "frontera_pareto_eficiente_real": [
+      {
+        "umbral_tau": 0.5,
+        "pct_resuelto_por_alpha": 87.1,
+        "pct_escalado_a_consejo": 12.9,
+        "accuracy_global": 0.9355,
+        "accuracy_ic95_wilson": [
+          0.7928,
+          0.9821
+        ],
+        "latencia_promedio_ms": 110.34,
+        "coste_relativo": 0.1298,
+        "utilidad_u_tau": 0.918,
+        "seleccionado_por_funcion_objetivo": true,
+        "es_pareto_eficiente": true
+      },
+      {
+        "umbral_tau": 0.9,
+        "pct_resuelto_por_alpha": 35.5,
+        "pct_escalado_a_consejo": 64.5,
+        "accuracy_global": 0.9677,
+        "accuracy_ic95_wilson": [
+          0.8381,
+          0.9943
+        ],
+        "latencia_promedio_ms": 551.62,
+        "coste_relativo": 0.649,
+        "utilidad_u_tau": 0.8801,
+        "seleccionado_por_funcion_objetivo": false,
+        "es_pareto_eficiente": true
+      }
+    ],
+    "deliberacion_tricerebral_consejo": {
+      "accuracy_beta_individual": 0.9677,
+      "accuracy_consejo_consenso": 0.9677,
+      "ganancia_consejo_puntos_porcentuales": 0.0,
+      "valor_neto_deliberacion_vnd": {
+        "formula": "VND = Errores_Corregidos - Errores_Introducidos",
+        "vnd_puntos_porcentuales": 0.0
+      }
+    }
+  }
+}

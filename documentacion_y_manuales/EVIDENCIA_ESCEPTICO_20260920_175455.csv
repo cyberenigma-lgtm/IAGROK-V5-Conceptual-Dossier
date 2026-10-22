@@ -1,0 +1,9 @@
+id,tipo,prompt,respuesta,latencia_ms,status_http,memoria_mb,cpu_pct,throughput,timestamp
+B1,knn_simd,"{'query': 'aprendizaje automático profundo', 'top_k': 5}",{'error': 'HTTP Error 400: BAD REQUEST'},2.91,0,32.8,0.0,?,2026-09-20T17:54:59.917315
+B2,knn_simd,"{'query': 'arquitectura de registros AVX2', 'top_k': 5}",{'error': 'HTTP Error 400: BAD REQUEST'},2.28,0,32.8,0.0,?,2026-09-20T17:54:59.970069
+B3,knn_simd,"{'query': 'sistemas operativos Ring 0', 'top_k': 5}",{'error': 'HTTP Error 400: BAD REQUEST'},2.31,0,32.8,0.0,?,2026-09-20T17:55:00.023139
+B4,api_status,GET,"{'cerebro_nativo_online': True, 'cpu_usage': 0.0, 'disk_usage': 0.0, 'memory_usage': 0.0, 'models': ['🧠 Cerebro Nativo S",3.07,200,32.8,0.0,N/A,2026-09-20T17:55:00.077015
+B5,api_status,GET,"{'cerebro_nativo_online': True, 'cpu_usage': 0.0, 'disk_usage': 0.0, 'memory_usage': 0.0, 'models': ['🧠 Cerebro Nativo S",2.82,200,32.8,0.0,N/A,2026-09-20T17:55:00.130204
+B6,knn_simd,"{'query': 'inteligencia artificial soberana local', 'top_k': 3}",{'error': 'HTTP Error 400: BAD REQUEST'},18.63,0,32.8,0.0,?,2026-09-20T17:55:00.200005
+B7,knn_simd,"{'query': 'motor vectorial SIMD nativo en C', 'top_k': 5}",{'error': 'HTTP Error 400: BAD REQUEST'},2.35,0,32.8,0.0,?,2026-09-20T17:55:00.252844
+B8,api_status,GET,"{'cerebro_nativo_online': True, 'cpu_usage': 0.0, 'disk_usage': 0.0, 'memory_usage': 0.0, 'models': ['🧠 Cerebro Nativo S",17.65,200,32.8,0.0,N/A,2026-09-20T17:55:00.321083

@@ -116,7 +116,33 @@ El servidor backend expone endpoints nativos para integrar la búsqueda vectoria
 
 ---
 
-### 🛡️ 6. Licencia y Derechos de Autor
+### 🧪 6. Verificación y Suite de Tests (Zero-Mock Real Execution)
+
+Para compilar y verificar el ecosistema completo con mediciones empíricas reales:
+
+1. **Suite de Verificación Nativa C99 (Sin Dependencias / Tiempo Real):**
+   ```cmd
+   TEST_VERIFICACION_COMPLETA_C99.bat
+   ```
+   *Compila el servidor nativo desde `iagrok_native/` y ejecuta los 7 tests de telemetría hardware, SIMD AVX2/FMA, paridad escalar vs vectorial, normalización y búsqueda k-NN en silicio (1.70 µs).*
+
+2. **Benchmark Científico y Arquitectónico (5 Niveles):**
+   ```cmd
+   ejecutar_y_actualizar_benchmark.bat
+   ```
+   *o directamente:*
+   ```cmd
+   python benchmarks/benchmark_harness_5_niveles.py
+   ```
+
+3. **Módulo de Defensa y Sanitización de Entradas:**
+   ```cmd
+   python sistemas_de_defensa/neuroshield_soberano/prompt_injection_guard.py
+   ```
+
+---
+
+### 🛡️ 7. Licencia y Derechos de Autor
 
 > **⚠️ ADVERTENCIA LEGAL:** Este proyecto es **propiedad intelectual exclusiva y reservada** de **Noxferion** (Safe Creative ID: `2609046909131`). Queda prohibida la ingeniería inversa, descompilado, redistribución o uso comercial no autorizado de la DLL nativa `dvtrgas30_engine.dll`.
 
@@ -231,6 +257,32 @@ The backend server exposes native endpoints to integrate SIMD vector search into
 
 ---
 
-### 🛡️ 6. License & Copyright
+### 🧪 6. Verification & Test Suite (Zero-Mock Real Execution)
+
+To compile and verify the entire architecture with real empirical hardware measurements:
+
+1. **Native C99 Verification Suite (Zero Dependencies / Real-Time):**
+   ```cmd
+   TEST_VERIFICACION_COMPLETA_C99.bat
+   ```
+   *Compiles native server from `iagrok_native/` and executes all 7 hardware telemetry, AVX2/FMA SIMD, vector normalization, and k-NN search tests (1.70 µs).*
+
+2. **Scientific & Architectural 5-Level Benchmark:**
+   ```cmd
+   ejecutar_y_actualizar_benchmark.bat
+   ```
+   *or directly:*
+   ```cmd
+   python benchmarks/benchmark_harness_5_niveles.py
+   ```
+
+3. **Security Firewall & Input Sanitizer:**
+   ```cmd
+   python sistemas_de_defensa/neuroshield_soberano/prompt_injection_guard.py
+   ```
+
+---
+
+### 🛡️ 7. License & Copyright
 
 > **⚠️ LEGAL NOTICE:** This project is the **exclusive proprietary intellectual property** of **Noxferion** (Safe Creative ID: `2609046909131`). Reverse engineering, decompilation, redistribution, or unauthorized commercial use of the native library `dvtrgas30_engine.dll` is strictly prohibited.

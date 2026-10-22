@@ -1,9 +1,8 @@
 # ============================================================================
-# 🛡️ IAGROK SOVEREIGN REPOSITORY — PROPRIETARY IP PROTECTED GITIGNORE
+# 🛡️ IAGROK SOVEREIGN REPOSITORY — GITIGNORE
 # ============================================================================
 
-# Proprietary C/C++/Rust Kernel Source & Binaries (Secreto de la Corona)
-# Motores nativos, Kernels, NeuroOS y Búnkeres de memoria protegidos
+# Proprietary C/C++/Rust Kernel Source & Binaries
 kernels/
 NeuroOSDEFINITIVO/
 target/
@@ -18,13 +17,13 @@ rust_crates/
 *.sqlite
 *.exe
 *.bin
+*.o
+*.obj
 NEURO_OS_BUNKER.gx
 
-# Proprietary C/C++ Source Code
+# Proprietary private files
 *_standalone_core.c
 *_private_core.c
-*.c
-*.h
 
 # Python Cache & Bytecode
 __pycache__/
@@ -62,8 +61,34 @@ ehthumbs.db
 *.pdf
 *.zip
 *.dll
-*.exe
 *.task
 node_modules/
 .firebase/
 *SAFECREATIVE*
+
+# Whitelist public native C99 engine
+!iagrok_native/
+!iagrok_native/*.c
+!iagrok_native/*.h
+!iagrok_native/Makefile
+!iagrok_native/build.bat
+!iagrok_native/*.md
+
+*.mp4
+*.dat
+dungeon_siege*.html
+chat_history.json
+*.neur
+node_modules/
+
+# App package bundles
+*.apk
+*.deb
+*.AppImage
+*.app
+
+# LLM model weights
+*.gguf
+*.bin
+models/
+**/models/

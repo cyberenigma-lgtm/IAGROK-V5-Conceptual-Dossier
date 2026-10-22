@@ -1,0 +1,38 @@
+# 📜 ÍNDICE DE INVENTARIO Y CERTIFICADO DE INTEGRIDAD DEL DOSSIER
+
+**Titular de Autoría e Invención:** José Manuel Moreno (JMM)  
+**Expediente de Registro Safe Creative:** 2609046909131  
+**Obra Registrada:** Arquitectura Cognitiva Soberana IAGROK V5 — Modelo PAR/IMPAR +1 y Neurobus 7 Maestro  
+**Fecha de Registro:** 4 de Septiembre de 2026  
+
+---
+
+## 1. INVENTARIO DE DOCUMENTOS DEL DOSSIER
+
+| Archivo | Descripción / Propósito | Autoridad / Derechos |
+| :--- | :--- | :--- |
+| [`01_WHITEPAPER_TECNICO_CONCEPTUAL_PROTEGIDO.md`](file:///c:/IAGROK/DOSSIER_REGISTRO_PROPIEDAD_INTELECTUAL_IAGROK_V5/01_WHITEPAPER_TECNICO_CONCEPTUAL_PROTEGIDO.md) | Whitepaper técnico académico fechado | © 2026 José Manuel Moreno (JMM) |
+| [`02_MEMORIA_EXPLICATIVA_Y_DOSSIER_LEGAL_SAFECREATIVE.md`](file:///c:/IAGROK/DOSSIER_REGISTRO_PROPIEDAD_INTELECTUAL_IAGROK_V5/02_MEMORIA_EXPLICATIVA_Y_DOSSIER_LEGAL_SAFECREATIVE.md) | Memoria explicativa para Registro PI | © 2026 José Manuel Moreno (JMM) |
+| [`03_LICENCIA_PROPIETARIA_RESTRUCTIVA_SOBERANA.md`](file:///c:/IAGROK/DOSSIER_REGISTRO_PROPIEDAD_INTELECTUAL_IAGROK_V5/03_LICENCIA_PROPIETARIA_RESTRUCTIVA_SOBERANA.md) | Licencia Propietaria Restrictiva | © 2026 José Manuel Moreno (JMM) |
+| [`04_DIAGRAMAS_Y_ESQUEMAS_ARQUITECTURALES_V5.md`](file:///c:/IAGROK/DOSSIER_REGISTRO_PROPIEDAD_INTELECTUAL_IAGROK_V5/04_DIAGRAMAS_Y_ESQUEMAS_ARQUITECTURALES_V5.md) | Diagramas y esquemas de bloques | © 2026 José Manuel Moreno (JMM) |
+| [`05_PRESENTACION_EJECUTIVA_NARRATIVA_SENIOR.md`](file:///c:/IAGROK/DOSSIER_REGISTRO_PROPIEDAD_INTELECTUAL_IAGROK_V5/05_PRESENTACION_EJECUTIVA_NARRATIVA_SENIOR.md) | Presentación ejecutiva senior | © 2026 José Manuel Moreno (JMM) |
+| [`06_INDEX_Y_CERTIFICADO_ESTRUCTURA_PROCESOS.md`](file:///c:/IAGROK/DOSSIER_REGISTRO_PROPIEDAD_INTELECTUAL_IAGROK_V5/06_INDEX_Y_CERTIFICADO_ESTRUCTURA_PROCESOS.md) | Certificado de integridad criptográfica | © 2026 José Manuel Moreno (JMM) |
+
+---
+
+## 2. HUELLAS CRIPTOGRÁFICAS SHA-256 PARA DEPOSITAR (SELLADO TEMPORAL)
+
+Las firmas SHA-256 generadas de cada documento garantizan de forma inmutable la fecha, hora e integridad de la obra creada por **José Manuel Moreno (JMM)**.
+
+*(Para recalcular o verificar las firmas criptográficas en cualquier momento, ejecutar `python generar_firmas_sha256.py` dentro de la carpeta del dossier).*
+
+
+### 🛡️ Firmas SHA-256 Calculadas:
+```txt
+01_WHITEPAPER_TECNICO_CONCEPTUAL_PROTEGIDO.md: cad56b4f4c3bf82bf315ebbd2138520095e279b68edf773631fbb9446d347831
+02_MEMORIA_EXPLICATIVA_Y_DOSSIER_LEGAL_SAFECREATIVE.md: 469fb7cd9f80c1a2690ef10d5d6632fb4ec6b3f781bdfedfe80bfb562ac4ebec
+03_LICENCIA_PROPIETARIA_RESTRUCTIVA_SOBERANA.md: 2785dfda18682c096596b5d506d8110a321009f4e21279d7dcb57c9943dcb820
+04_DIAGRAMAS_Y_ESQUEMAS_ARQUITECTURALES_V5.md: 24675eb0f4275c0ccc928a6212f20329dd74e7b1e5e366771227faf37fb27244
+05_PRESENTACION_EJECUTIVA_NARRATIVA_SENIOR.md: a9a3779d48afe04d31f3ee9fdddb8e376e13df21d5b9baf76a9bfd72d63934ef
+06_INDEX_Y_CERTIFICADO_ESTRUCTURA_PROCESOS.md: 9f200c93a793fb57ee1954c65d3291f3cb4a4c9c61d2c6d8ec23b0defe44678b
+```

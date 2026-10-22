@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "timestamp": "20260920_203452",
+    "sistema": "Windows-11-10.0.26220-SP0",
+    "procesador": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "base_url": "http://127.0.0.1:5000"
+  },
+  "resultados": [
+    {
+      "id": "B1",
+      "tipo": "knn_simd",
+      "prompt": "{'query': 'aprendizaje automático profundo', 'documents': ['IAGROK V5 es la Arqu",
+      "respuesta": "{'backend': 'C DLL Nativa Anillo 0 (SIMD AVX2/FMA)', 'effective_tops': 31.85, 'latency_ms': 3.899, 'matches': [{'documen",
+      "latencia_ms": 392.87,
+      "status_http": 200,
+      "memoria_mb": 32.93,
+      "cpu_pct": 0.0,
+      "throughput": "?",
+      "timestamp": "2026-09-20T20:34:56.283193"
+    },
+    {
+      "id": "B2",
+      "tipo": "knn_simd",
+      "prompt": "{'query': 'arquitectura de registros AVX2', 'documents': ['IAGROK V5 es la Arqui",
+      "respuesta": "{'backend': 'C DLL Nativa Anillo 0 (SIMD AVX2/FMA)', 'effective_tops': 31.85, 'latency_ms': 0.88, 'matches': [{'document",
+      "latencia_ms": 6.18,
+      "status_http": 200,
+      "memoria_mb": 32.94,
+      "cpu_pct": 0.0,
+      "throughput": "?",
+      "timestamp": "2026-09-20T20:34:56.340113"
+    },
+    {
+      "id": "B3",
+      "tipo": "knn_simd",
+      "prompt": "{'query': 'sistemas operativos Ring 0', 'documents': ['IAGROK V5 es la Arquitect",
+      "respuesta": "{'backend': 'C DLL Nativa Anillo 0 (SIMD AVX2/FMA)', 'effective_tops': 31.85, 'latency_ms': 0.969, 'matches': [{'documen",
+      "latencia_ms": 6.48,
+      "status_http": 200,
+      "memoria_mb": 32.94,
+      "cpu_pct": 0.0,
+      "throughput": "?",
+      "timestamp": "2026-09-20T20:34:56.397441"
+    },
+    {
+      "id": "B4",
+      "tipo": "api_status",
+      "prompt": "GET",
+      "respuesta": "{'cerebro_nativo_online': True, 'cpu_usage': 0.0, 'disk_usage': 0.0, 'memory_usage': 0.0, 'models': ['🧠 Cerebro Nativo S",
+      "latencia_ms": 24.61,
+      "status_http": 200,
+      "memoria_mb": 32.95,
+      "cpu_pct": 0.0,
+      "throughput": "N/A",
+      "timestamp": "2026-09-20T20:34:56.472938"
+    },
+    {
+      "id": "B5",
+      "tipo": "api_status",
+      "prompt": "GET",
+      "respuesta": "{'cerebro_nativo_online': True, 'cpu_usage': 0.0, 'disk_usage': 0.0, 'memory_usage': 0.0, 'models': ['🧠 Cerebro Nativo S",
+      "latencia_ms": 25.34,
+      "status_http": 200,
+      "memoria_mb": 32.95,
+      "cpu_pct": 0.0,
+      "throughput": "N/A",
+      "timestamp": "2026-09-20T20:34:56.548786"
+    },
+    {
+      "id": "B6",
+      "tipo": "knn_simd",
+      "prompt": "{'query': 'inteligencia artificial soberana local', 'documents': ['IAGROK V5 es ",
+      "respuesta": "{'backend': 'C DLL Nativa Anillo 0 (SIMD AVX2/FMA)', 'effective_tops': 31.85, 'latency_ms': 1.186, 'matches': [{'documen",
+      "latencia_ms": 4.05,
+      "status_http": 200,
+      "memoria_mb": 32.95,
+      "cpu_pct": 0.0,
+      "throughput": "?",
+      "timestamp": "2026-09-20T20:34:56.603709"
+    },
+    {
+      "id": "B7",
+      "tipo": "knn_simd",
+      "prompt": "{'query': 'motor vectorial SIMD nativo en C', 'documents': ['IAGROK V5 es la Arq",
+      "respuesta": "{'backend': 'C DLL Nativa Anillo 0 (SIMD AVX2/FMA)', 'effective_tops': 31.85, 'latency_ms': 1.611, 'matches': [{'documen",
+      "latencia_ms": 6.13,
+      "status_http": 200,
+      "memoria_mb": 32.95,
+      "cpu_pct": 0.0,
+      "throughput": "?",
+      "timestamp": "2026-09-20T20:34:56.660445"
+    },
+    {
+      "id": "B8",
+      "tipo": "api_status",
+      "prompt": "GET",
+      "respuesta": "{'cerebro_nativo_online': True, 'cpu_usage': 0.0, 'disk_usage': 0.0, 'memory_usage': 0.0, 'models': ['🧠 Cerebro Nativo S",
+      "latencia_ms": 21.85,
+      "status_http": 200,
+      "memoria_mb": 32.95,
+      "cpu_pct": 0.0,
+      "throughput": "N/A",
+      "timestamp": "2026-09-20T20:34:56.733059"
+    }
+  ],
+  "sha256_firma": "92c8613202f0d7a412ef055b9467032e3978144b052c9efc09688fc5fec2a503"
+}

@@ -1,0 +1,176 @@
+IAGROK V5 — REPORTE AUDITORIA FORENSE DVTRGAS-30
+Timestamp: 20260920_014207
+========================================================================
+SISTEMA:
+{
+  "timestamp": "20260920_014207",
+  "os": "Windows-11-10.0.26220-SP0",
+  "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+  "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+  "machine": "AMD64",
+  "node": "GT1_Mega",
+  "dll_path": "C:\\IAGROK\\modulos\\MODULOS_COMERCIALES\\Modulo_8_DVTRGAS25_Runtime\\dvtrgas30_engine.dll",
+  "dll_existe": true
+}
+========================================================================
+RESULTADOS:
+{
+  "A_dumpbin": {
+    "ok": true,
+    "dll_path": "C:\\IAGROK\\modulos\\MODULOS_COMERCIALES\\Modulo_8_DVTRGAS25_Runtime\\dvtrgas30_engine.dll",
+    "dll_sha256": "5e1387de96b7f7c82d8a2c108e280cf1da5fd59e60b49f5af0751a09abfa9852",
+    "dll_size_bytes": 240773,
+    "exportaciones_ctypes": [
+      "dvtrgas30_init_engine  @ 0x00007FFD08371360",
+      "dvtrgas30_render_neural_frame_unified  @ 0x00007FFD083713B0",
+      "dvtrgas30_cosine_knn_search  @ 0x00007FFD08371410",
+      "dvtrgas30_get_stats  @ 0x00007FFD083713E0"
+    ],
+    "dumpbin_disponible": false
+  },
+  "B_ciclos": {
+    "ok": true,
+    "backend": "C DLL Nativa (AVX2)",
+    "N_vectores": 128,
+    "DIM": 1536,
+    "iteraciones": 20,
+    "min_ns": 102100,
+    "max_ns": 198700,
+    "median_ns": 111600,
+    "mean_ns": 116415.0,
+    "jitter_pct": 82.98,
+    "ciclos_est": 323640
+  },
+  "C_escala": {
+    "ok": true,
+    "backend": "DLL Nativa",
+    "mediciones": {
+      "32": 38400,
+      "64": 63200,
+      "128": 107200,
+      "256": 194000,
+      "512": 354200,
+      "1024": 693800,
+      "2048": 1788500
+    },
+    "pearson_r": 0.9927,
+    "lineal": true
+  },
+  "D_cpu": {
+    "ok": true,
+    "backend": "DLL Nativa",
+    "N": 2048,
+    "REPS": 10,
+    "wall_s": 4.2147,
+    "user_cpu_s": 0.0,
+    "kernel_cpu_s": 0.0,
+    "total_cpu_s": 0.0,
+    "cpu_util_pct": 0.0,
+    "gflops": 0.015
+  }
+}
+========================================================================
+LOG COMPLETO:
+========================================================================
+IAGROK V5 — AUDITOR FORENSE DVTRGAS-30
+Prueba empirica de nivel hardware para escepticos tecnicos
+========================================================================
+Inicio: 2026-09-20T01:42:07.353620
+
+========================================================================
+[A] INSPECCION DLL: dumpbin /exports dvtrgas30_engine.dll
+========================================================================
+  Archivo : C:\IAGROK\modulos\MODULOS_COMERCIALES\Modulo_8_DVTRGAS25_Runtime\dvtrgas30_engine.dll
+  Tamanio : 240,773 bytes
+  SHA-256 : 5e1387de96b7f7c82d8a2c108e280cf1da5fd59e60b49f5af0751a09abfa9852
+  INFO: dumpbin.exe no encontrado (Visual Studio no instalado).
+  Alternativa: Inspeccion de exports via ctypes + GetProcAddress
+
+  Verificacion via GetProcAddress (ctypes):
+    dvtrgas30_init_engine  @ 0x00007FFD08371360
+    dvtrgas30_render_neural_frame_unified  @ 0x00007FFD083713B0
+    dvtrgas30_cosine_knn_search  @ 0x00007FFD08371410
+    dvtrgas30_get_stats  @ 0x00007FFD083713E0
+
+========================================================================
+[B] CICLOS REALES DE CPU — perf_counter_ns (equivalente RDTSC)
+========================================================================
+  Backend: C DLL Nativa (AVX2)  |  N=128 vectores  |  DIM=1536  |  Iteraciones=20
+
+  Iter 01:    116,600 ns  (0.1166 ms)
+  Iter 02:    106,800 ns  (0.1068 ms)
+  Iter 03:    110,000 ns  (0.1100 ms)
+  Iter 04:    105,400 ns  (0.1054 ms)
+  Iter 05:    109,300 ns  (0.1093 ms)
+  Iter 06:    115,600 ns  (0.1156 ms)
+  Iter 07:    112,000 ns  (0.1120 ms)
+  Iter 08:    111,600 ns  (0.1116 ms)
+  Iter 09:    109,300 ns  (0.1093 ms)
+  Iter 10:    113,800 ns  (0.1138 ms)
+  Iter 11:    115,700 ns  (0.1157 ms)
+  Iter 12:    198,700 ns  (0.1987 ms)
+  Iter 13:    103,300 ns  (0.1033 ms)
+  Iter 14:    105,900 ns  (0.1059 ms)
+  Iter 15:    109,700 ns  (0.1097 ms)
+  Iter 16:    134,200 ns  (0.1342 ms)
+  Iter 17:    117,200 ns  (0.1172 ms)
+  Iter 18:    106,500 ns  (0.1065 ms)
+  Iter 19:    124,600 ns  (0.1246 ms)
+  Iter 20:    102,100 ns  (0.1021 ms)
+
+  ESTADISTICAS (C DLL Nativa (AVX2)):
+    Min:       102,100 ns
+    Max:       198,700 ns
+    Media:     116,415 ns
+    Median:    111,600 ns  (0.1116 ms)
+    Jitter: 83.0%  (menor es mas estable)
+    Ciclos estimados @ 2.9 GHz: 323,640
+    Ops/ciclo aprox: 1.21  (dot products)
+
+========================================================================
+[C] ESCALA PROPORCIONAL — Si escala linealmente, es un motor real
+========================================================================
+  Principio: un algoritmo real tarda proporcional a N × DIM.
+  Un mock devolveria siempre la misma latencia fija.
+
+  Backend: DLL Nativa  |  DIM=1536  |  REPS=5 por tamanio
+       N      Median(ns)        ms    Escala vs N=32  Ratio esperado
+  ------  --------------  --------  ----------------  --------------
+      32          38,400    0.0384              1.00x             1.0x
+      64          63,200    0.0632              1.65x             2.0x
+     128         107,200    0.1072              2.79x             4.0x
+     256         194,000    0.1940              5.05x             8.0x
+     512         354,200    0.3542              9.22x            16.0x
+    1024         693,800    0.6938             18.07x            32.0x
+    2048       1,788,500    1.7885             46.58x            64.0x
+
+  Correlacion de Pearson (N vs latencia): r = 0.9927
+  PASA (r > 0.95 = escala lineal real)
+
+========================================================================
+[D] USO REAL DE CPU — Windows GetProcessTimes + psutil (si disponible)
+========================================================================
+  [psutil] User CPU consumido:   4.0625 s
+  [psutil] System CPU consumido: 0.1406 s
+  Backend:         DLL Nativa
+  N = 2048 vectores x 10 repeticiones
+  Tiempo wall-clock: 4.2147 s
+  [WinAPI] User CPU:   0.0000 s
+  [WinAPI] Kernel CPU: 0.0000 s
+  [WinAPI] Total CPU:  0.0000 s
+  [WinAPI] Utilizacion estimada del proceso: 0.0%
+  Interpretacion: 0% de 1 core fisico utilizado
+
+  INSTRUCCIONES ESTIMADAS:
+    N x DIM x 2 x REPS = 62,914,560 flops
+    GFLOPS efectivos: 0.015
+
+========================================================================
+GENERANDO REPORTE FORENSE FIRMADO
+========================================================================
+
+  Sistema: Windows-11-10.0.26220-SP0
+  Procesador: Intel64 Family 6 Model 170 Stepping 4, GenuineIntel
+  Python: 3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]
+========================================================================
+SHA-256 REPORTE: 201b6515838e84890deda0717413ef26f2beefe04352c0c7c8c16cf346b4baf7

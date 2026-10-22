@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 ===============================================================================
-🛡️ IAGROK NEUROSHIELD - ESCUDO ANTI-PROMPT INJECTION Y DEFENSA LLMKEDIN
+🛡️ IAGROK NEUROSHIELD - PROMPT INJECTION & UNICODE SANITIZATION FIREWALL
 ===============================================================================
-Autor: José Manuel Moreno Cano (Cyberenigma / Noxferion)
+Autor: José Manuel Moreno (JMM) (Cyberenigma / Noxferion)
 SafeCreative IDs: 2609046909131 | 2609036897950
 
 Módulo de Defensa Activa contra:
@@ -33,7 +33,7 @@ class ResultadoEscaneoSeguridad:
     es_bot_detectado: bool
 
 
-class EscudoAntiLLMkedin:
+class PromptInjectionGuard:
     def __init__(self):
         # Patrones comunes de Inyección de Prompts y Jailbreak
         self.patrones_inyeccion = [
@@ -119,7 +119,7 @@ class EscudoAntiLLMkedin:
 
 
 # Instancia global exportable para IAGROK
-escudo_anti_llmkedin = EscudoAntiLLMkedin()
+prompt_injection_guard = PromptInjectionGuard()
 
 
 # -----------------------------------------------------------------------------
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     ]
 
     for i, caso in enumerate(casos_prueba, 1):
-        res = escudo_anti_llmkedin.escanear_texto(caso)
+        res = prompt_injection_guard.escanear_texto(caso)
         print(f"\nCaso {i}: \"{caso[:60]}...\"")
         print(f" ├─ ¿Es Seguro?:       {'✅ SÍ' if res.es_seguro else '🚨 NO (Amenaza Detectada)'}")
         print(f" ├─ Nivel de Amenaza: {res.nivel_amenaza} / 1.0")
